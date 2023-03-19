@@ -1,14 +1,6 @@
-fn withdrawal() {
-    println!("User requested a withdrawal")
-}
+mod transaction;
 
-fn deposit() {
-    println!("User requested a deposit")
-}
-
-fn transfer() {
-    println!("User requested a transfer")
-}
+use transaction::*;
 
 enum TransactionType {
     Withdrawal,
