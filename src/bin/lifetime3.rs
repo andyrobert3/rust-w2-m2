@@ -1,4 +1,4 @@
-fn return_some_string(string1: &str, string2: &str) -> &str {
+fn return_some_string<'a, 'b>(string1: &'a str, string2: &'b str) -> &'a str {
     string1 // if we were to return string2 here, we would have dangling ref in our example
 }
 fn main() {

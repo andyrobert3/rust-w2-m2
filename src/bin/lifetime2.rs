@@ -3,9 +3,9 @@ struct Person {
     name: String,
 }
 
-struct Company {
+struct Company<'a> {
     name: String,
-    ceo: &Person, //error: missing lifetime specifier
+    ceo: &'a Person, //error: missing lifetime specifier
 }
 
 fn main() {
